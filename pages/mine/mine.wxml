@@ -1,0 +1,90 @@
+<view class="head">
+    <image class="banner" src="/img/mine_banner.png" mode="widthFix"></image>
+    <image class="logo" src="/img/index_logo.png" mode="aspectFit" wx:if="{{staffFlag === 2}}"></image>
+    <image class="logo" src="/img/index_logo1.png" mode="aspectFit" wx:elif="{{staffFlag === 3}}"></image>
+    <view class="head-info" wx:if="{{signFlag}}">
+        <open-data class="avatar" type="userAvatarUrl" default-avatar="/img/mine_default_avatar.png"></open-data>
+        <view>
+            <!-- <open-data class="name" type="userNickName" default-text=""></open-data> -->
+            <view class="name">{{username}}</view>
+            <view class="head-tel">
+                <image class="head-tel-icon" src="/icon/mine_tel.png"></image>
+                <text class="tel">{{tel}}</text>
+                <text class="head-button" bindtap="toRegistered" data-flag="2">更改手机号</text>
+            </view>
+        </view>
+        <view bindtap="exitLogin" class="logout">退出</view>
+    </view>
+    <view class="head-info" wx:else>
+        <image class="avatar" src="/img/mine_default_avatar.png"></image>
+        <text class="name" bindtap="toRegistered" data-flag="1">点击登录/注册</text>
+    </view>
+    <view class="mark-wrap">
+        <view class="mark-item" bindtap="toMarkList" data-flag="mark">
+            <view class="mark-info">
+                <text class="mark-num">{{markNum1}}</text>
+                <text class="mark-text">收藏夹</text>
+            </view>
+            <image class="mark-icon" src="/icon/mine_mark1.png"></image>
+        </view>
+        <view class="mark-line"></view>
+        <view class="mark-item" bindtap="toMarkList" data-flag="reservation">
+            <view class="mark-info">
+                <text class="mark-num">{{markNum2}}</text>
+                <text class="mark-text">我的预约</text>
+            </view>
+            <image class="mark-icon" src="/icon/mine_mark2.png"></image>
+        </view>
+    </view>
+</view>
+<scroll-view class="container" scroll-y wx:if="{{downFlag}}">
+    <view class="content" wx:if="{{down1Flag}}">
+        <view class="down-head" bindtap="switchDown" data-flag="item1">
+            <image class="down-head-icon1" src="/icon/mine_down1.png" mode="aspectFit"></image>
+            <text class="down-head-text">下载的留学攻略</text>
+            <image class="down-head-icon2{{down1HeadCss}}" src="/icon/mine_icon.png"></image>
+        </view>
+        <view class="down-box{{down1Css}}">
+            <view class="down-wrap">
+                <view class="down-item" wx:for="{{down1List}}" wx:key="*this" bindtap="toDownDataList" data-type="{{item=='综合'?'l综合':item}}">
+                    <image class="down-item-icon" src="/icon/mine_book1.png" mode="aspectFit"></image>
+                    <text class="down-item-text">{{item}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="content" wx:if="{{down2Flag}}">
+        <view class="down-head" bindtap="switchDown" data-flag="item2">
+            <image class="down-head-icon1" src="/icon/mine_down2.png" mode="aspectFit"></image>
+            <text class="down-head-text">下载的考培资料</text>
+            <image class="down-head-icon2{{down2HeadCss}}" src="/icon/mine_icon.png"></image>
+        </view>
+        <view class="down-box{{down2Css}}">
+            <view class="down-wrap">
+                <view class="down-item" wx:for="{{down2List}}" wx:key="*this" bindtap="toDownDataList" data-type="{{item}}">
+                    <image class="down-item-icon" src="/icon/mine_book2.png" mode="aspectFit"></image>
+                    <text class="down-item-text">{{item}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="content" wx:if="{{down3Flag}}">
+        <view class="down-head" bindtap="switchDown" data-flag="item3">
+            <image class="down-head-icon1" src="/icon/mine_down3.png" mode="aspectFit"></image>
+            <text class="down-head-text">下载的企业求职资料</text>
+            <image class="down-head-icon2{{down3HeadCss}}" src="/icon/mine_icon.png"></image>
+        </view>
+        <view class="down-box{{down3Css}}">
+            <view class="down-wrap">
+                <view class="down-item" wx:for="{{down3List}}" wx:key="*this" bindtap="toDownDataList" data-type="{{item}}">
+                    <image class="down-item-icon" src="/icon/mine_book3.png" mode="aspectFit"></image>
+                    <text class="down-item-text">{{item}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</scroll-view>
+<view class="no-data" wx:else>
+    <image class="no-data-icon" src="/icon/mine_no_data.png"></image>
+    <text class="no-data-text">您还没有下载任何资料哦</text>
+</view>

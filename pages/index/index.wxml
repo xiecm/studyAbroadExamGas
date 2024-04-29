@@ -1,0 +1,73 @@
+<view class="head" style="height: {{headHeight}}px;">
+    <image class="head-bg" src="/img/index_banner.png" mode="widthFix"></image>
+    <view class="title-box" style="top: {{titleTop}}px;">
+        <image class="logo" src="/img/index_logo.png"></image>
+        <text class="title" style="line-height: {{headHeight - titleTop}}px;">新通留学考试加油站</text>
+    </view>
+</view>
+<qrCode path="/pages/findex/findex" atype="index" aid="99">
+    <view class="container" scroll-y enable-back-to-top bindscroll="doScroll">
+        <image class="banner" src="/img/index_banner.png" mode="widthFix"></image>
+        <view class="content" style="top: {{headHeight}}px;">
+            <view class="swiper-box swiper1-box">
+                <swiper class="swiper" autoplay circular bindchange="swiper1Change">
+                    <swiper-item wx:for="{{swiper1List}}" wx:key="id" bindtap="toActiveDetail" data-id="{{item.id}}">
+                        <image class="swiper-img" src="{{item.src}}" mode="aspectFill"></image>
+                    </swiper-item>
+                </swiper>
+                <view class="swiper-dot-box swiper1-dot-box">
+                    <view class="swiper-dot{{item.css}}" wx:for="{{swiper1List}}" wx:key="id"></view>
+                </view>
+            </view>
+            <view class="link-box">
+                <view class="link" bindtap="toDataList" data-index="0">
+                    <image class="link-icon link-icon1" src="/icon/index_link_icon1.png"></image>
+                    <text class="link-text">留学攻略</text>
+                </view>
+                <view class="link" bindtap="toDataList" data-index="1">
+                    <image class="link-icon link-icon2" src="/icon/index_link_icon2.png"></image>
+                    <text class="link-text">出国考试</text>
+                </view>
+                <view class="link" bindtap="toDataList" data-index="2">
+                    <image class="link-icon link-icon3" src="/icon/index_link_icon3.png"></image>
+                    <text class="link-text">企业求职</text>
+                </view>
+                <view class="link" bindtap="toCourseList">
+                    <image class="link-icon link-icon4" src="/icon/index_link_icon4.png"></image>
+                    <text class="link-text">讲座活动</text>
+                </view>
+            </view>
+            <view class="swiper-box swiper2-box">
+                <swiper class="swiper" autoplay circular bindchange="swiper2Change">
+                    <swiper-item wx:for="{{swiper2List}}" wx:key="id">
+                        <navigator class="swiper-nav" url="{{item.url}}" hover-class="none">
+                            <image class="swiper-img" src="{{item.src}}" mode="aspectFill"></image>
+                        </navigator>
+                    </swiper-item>
+                </swiper>
+                <view class="swiper-dot-box swiper2-dot-box" wx:if="{{swiper2List.length > 1}}">
+                    <view class="swiper-dot{{item.css}}" wx:for="{{swiper2List}}" wx:key="id"></view>
+                </view>
+            </view>
+            <view class="recommend-box">
+                <image class="recommend-bg" src="/img/index_recommend_bg.png"></image>
+                <view class="recommend">
+                    <view class="recommend-title{{fixedTitle}}" style="top: {{recommendTitleTop}};">
+                        <view class="recommend-title-wrap" style="width: {{recommendTitleWidth}}px;" direction="horizontal" inertia out-of-bounds>
+                            <view class="recommend-title-item" wx:for="{{recommendTitleList}}" wx:key="tit" bindtap="courseChange" data-index="{{index}}" data-type="{{item.type}}">
+                                <text class="recommend-title1{{item.titActive}}">{{item.tit}}</text>
+                                <text class="recommend-title2{{item.textActive}}">{{item.text}}</text>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="recommend-wrap">
+                        <view class="recommend-item" wx:for="{{recommendList}}" wx:key="id" bindtap="toFreeCourseDetail" data-id="{{item.id}}">
+                            <image class="recommend-pic" src="{{item.pic}}" mode="aspectFill"></image>
+                            <text class="recommend-text">{{item.title}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</qrCode>

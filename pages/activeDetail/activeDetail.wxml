@@ -1,0 +1,12 @@
+<qrCode path="{{path}}" atype="act" aid="{{id}}">
+    <scroll-view class="content" scroll-y enable-back-to-top>
+        <image class="max-pic" src="{{pic}}" mode="widthFix"></image>
+    </scroll-view>
+</qrCode>
+<view class="bottom">
+    <view class="mark" bindtap="mark">
+        <image class="mark-icon" src="{{markSrc}}"></image>
+        <text class="mark-text">{{markText}}</text>
+    </view>
+    <text class="button" bindtap="toReservation">{{reText}}</text>
+</view>

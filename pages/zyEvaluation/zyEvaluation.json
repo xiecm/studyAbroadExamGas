@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "大学生职业竞争力测评",
+    "usingComponents": {
+      "qrCode": "/components/getQrCodeComponent/getQrCodeComponent"
+    }
+}

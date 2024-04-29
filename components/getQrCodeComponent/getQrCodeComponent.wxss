@@ -1,0 +1,60 @@
+.movable-box {
+    width: 100%;
+    height: 100%;
+}
+.qrCode-flag-box {
+    width: 78rpx;
+    height: 78rpx;
+    background: rgba(0, 0, 0, .3);
+    border-radius: 50%;
+    display: flex;
+    z-index: 6;
+}
+.qrCode-flag-icon {
+    width: 46rpx;
+    height: 46rpx;
+    margin: auto;
+}
+.qrCode-pop {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .5);
+    z-index: 10;
+}
+.qrCode-pop-content {
+    width: 442rpx;
+    height: 506rpx;
+    background: #fff;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 154rpx;
+    margin-top: -300rpx;
+    padding-top: 40rpx;
+}
+.qrCode-qrCode {
+    width: 344rpx;
+    height: 344rpx;
+    margin: 0 auto;
+}
+.qrCode-pop-text {
+    font-size: 26rpx;
+    line-height: 94rpx;
+}
+.qrCode-pop-close-icon {
+    width: 48rpx;
+    height: 100rpx;
+    position: absolute;
+    bottom: -100rpx;
+    left: 197rpx;
+}
+.qrCode-pop-close {
+    width: 48rpx;
+    height: 48rpx;
+    position: absolute;
+    bottom: -100rpx;
+    left: 197rpx;
+}

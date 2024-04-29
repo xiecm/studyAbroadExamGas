@@ -1,0 +1,100 @@
+page {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.bg {
+    width: 100%;
+    height: 100%;
+    background: #ececec;
+}
+.container {
+    position: absolute;
+    width: 100%;
+    top: 52rpx;
+    left: 0;
+}
+.logo {
+    width: 204rpx;
+    height: 64rpx;
+    margin-left: 52rpx;
+}
+.title {
+    font-size: 54rpx;
+    line-height: 74rpx;
+    font-weight: 700;
+    width: 600rpx;
+    height: 148rpx;
+    overflow: hidden;
+    text-align: center;
+    margin: 104rpx auto 100rpx;
+}
+form {
+    width: 560rpx;
+    margin: 0 auto;
+}
+.item {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 30rpx;
+}
+.item1, .item2, .item-box {
+    margin-bottom: 34rpx;
+}
+.item-box {
+    display: flex;
+    justify-content: space-between;
+}
+.item3 {
+    width: 380rpx;
+}
+.icon {
+    width: 24rpx;
+    height: 24rpx;
+    margin: 0 16rpx 0 32rpx;
+}
+.text {
+    font-size: 26rpx;
+    line-height: 60rpx;
+}
+.picker{
+  font-size: 26rpx;
+}
+.input {
+    font-size: 26rpx;
+    line-height: 60rpx;
+    height: 60rpx;
+}
+.input1, .input2 {
+    width: 450rpx;
+}
+.input3 {
+    width: 270rpx;
+}
+.text1 {
+    font-size: 26rpx;
+    line-height: 60rpx;
+    text-decoration: underline;
+    color: #cb70b8;
+    margin: 0 40rpx 0 auto;
+}
+.btn1, .btn2 {
+    padding: 0;
+    font-weight: normal;
+    color: #fff;
+    background: linear-gradient(-43deg, #de6a9b, #cb70b8, #b06dd0);
+}
+.btn1 {
+    width: 166rpx !important;
+    font-size: 28rpx;
+    line-height: 60rpx;
+    border-radius: 30rpx;
+}
+.btn2 {
+    width: 560rpx !important;
+    font-size: 32rpx;
+    line-height: 74rpx;
+    border-radius: 38rpx;
+    margin-top: 154rpx;
+}

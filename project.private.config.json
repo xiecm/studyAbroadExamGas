@@ -1,0 +1,91 @@
+{
+    "setting": {
+        "urlCheck": false,
+        "preloadBackgroundData": false,
+        "coverView": true,
+        "autoAudits": false,
+        "showShadowRootInWxmlPanel": true,
+        "checkInvalidKey": true,
+        "compileHotReLoad": true,
+        "lazyloadPlaceholderEnable": false,
+        "showES6CompileOption": false,
+        "useStaticServer": true
+    },
+    "condition": {
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "职业测评",
+                    "pathName": "pages/zyEvaluation/zyEvaluation",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "测评结果页",
+                    "pathName": "pages/zyResult/zyResult",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "职业测评",
+                    "pathName": "pages/zyEvaluation/zyEvaluation",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "pages/registered/registered",
+                    "pathName": "pages/registered/registered",
+                    "query": "from=%E4%B8%AA%E4%BA%BA%E4%B8%AD%E5%BF%83&flag=1",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "pages/freeCourseDetail/freeCourseDetail",
+                    "pathName": "pages/freeCourseDetail/freeCourseDetail",
+                    "query": "id=4436",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "pages/dataList/dataList",
+                    "pathName": "pages/dataList/dataList",
+                    "query": "index=0",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "pages/dataList/dataList",
+                    "pathName": "pages/dataList/dataList",
+                    "query": "index=0",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/index/index",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "pages/registered/registered",
+                    "pathName": "pages/registered/registered",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "攻略",
+                    "pathName": "pages/dataList/dataList",
+                    "query": "",
+                    "scene": null
+                }
+            ]
+        }
+    },
+    "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+    "projectname": "studyAbroadExamGas",
+    "libVersion": "3.4.2"
+}

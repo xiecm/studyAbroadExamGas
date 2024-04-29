@@ -1,0 +1,11 @@
+<image class="bg" src="/img/registered_bg.png" mode="widthFix"></image>
+<view class="container">
+  <image class="logo" src="/img/registered_logo.png" mode="aspectFit"></image>
+  <image class="slogan" src="/img/registered_title.png"></image>
+  <button  class="fastLogin" open-type="getPhoneNumber" bindgetphonenumber="getChatTel">
+    <text class="text">一键快捷登录</text>
+  </button>
+  <button  class="get-tel" bindtap="goPhoneLogin">
+    <text class="get-tel-text">请输入手机号登录或注册</text>
+  </button>
+</view>

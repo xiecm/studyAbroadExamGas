@@ -1,0 +1,31 @@
+<image class="bg" src="/img/activeReservation_bg.png" mode="aspectFill"></image>
+<view class="container">
+    <image class="logo" src="/img/activeReservation_logo.png"></image>
+    <text class="title">{{title}}</text>
+    <form bindsubmit="submit">
+        <view class="item item1">
+            <image class="icon" src="/icon/registered_icon1.png" mode="aspectFit"></image>
+            <input class="input input1" name="name" value="{{name}}" placeholder="姓名"/>
+        </view>
+        <view class="item item2">
+            <image class="icon" src="/icon/registered_icon2.png" mode="aspectFit"></image>
+            <text class="text" wx:if="{{!telChangeFlag}}">{{tel}}</text>
+            <input class="input input2" type="number" placeholder="手机号" value="{{tel}}" focus="{{focusFlag}}" bindinput="getTel" wx:else />
+            <text class="text1" bindtap="change" wx:if="{{!telChangeFlag}}">更改</text>
+        </view>
+        <view class="item-box" wx:if="{{telChangeFlag}}">
+            <view class="item item3">
+                <image class="icon" src="/icon/registered_icon3.png" mode="aspectFit"></image>
+                <input class="input input3" placeholder="验证码" name="code" />
+            </view>
+            <button class="btn1" bindtap="sendTel">{{codeText}}</button>
+        </view>
+        <!-- <view class="item item4">
+            <image class="icon" src="/icon/activeReservation_icon3.png" mode="aspectFit"></image>
+            <picker class="picker" header-text="请选择您所在的城市" value="{{cityArr}}" range="{{cityArr}}" bindchange="selectCity">
+                <text class="text">{{cityArr[index]}}</text>
+            </picker>
+        </view> -->
+        <button class="btn2" form-type="submit">预约报名</button>
+    </form>
+</view>

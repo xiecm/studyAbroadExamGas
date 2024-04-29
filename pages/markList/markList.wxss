@@ -1,0 +1,140 @@
+page {
+    height: 100%;
+    background: #f2f7fa;
+}
+.tit-wrap {
+    width: 650rpx;
+    position: fixed;
+    top: 30rpx;
+    left: 50rpx;
+    background: #fff;
+    overflow: hidden;
+    border-radius: 24rpx;
+    display: flex;
+}
+.tit-item {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tit-icon {
+    width: 20rpx;
+    height: 20rpx;
+    margin-right: 8rpx;
+}
+.tit-text {
+    font-size: 24rpx;
+    line-height: 46rpx;
+}
+.tit-active1 {
+    background: linear-gradient(-90deg, #f05200, #f27700);
+    color: #fff;
+}
+.tit-active2 {
+    background: linear-gradient(90deg, #f05200, #f27700);
+    color: #fff;
+}
+.container {
+    height: 100%;
+    padding-top: 106rpx;
+}
+.wrap1, .wrap2 {
+    width: 710rpx;
+    margin: 0 auto;
+}
+.wrap1-item, .wrap2-item {
+    background: #fff;
+    border-radius: 8rpx;
+    box-shadow: 0 0 30rpx rgba(63, 63, 63, .18);
+    position: relative;
+    margin-bottom: 30rpx;
+}
+.wrap1 {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+.wrap1-item {
+    width: 346rpx;
+    height: 328rpx;
+}
+.wrap1-pic {
+    width: 100%;
+    height: 210rpx;
+    border-radius: 8rpx 8rpx 0 0;
+}
+.wrap1-icon, .wrap2-icon {
+    width: 38rpx;
+    height: 36rpx;
+    position: absolute;
+}
+.wrap1-icon {
+    top: 14rpx;
+    right: 14rpx;
+}
+.wrap1-title {
+    font-size: 24rpx;
+    line-height: 46rpx;
+    font-weight: 700;
+    width: 300rpx;
+    margin: 12rpx auto 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.wrap1-flag-box {
+    display: flex;
+    padding-left: 10rpx;
+    font-size: 20rpx;
+    line-height: 32rpx;
+    text-align: center;
+}
+.wrap1-flag-text {
+    padding: 0 10rpx;
+    background: #f2f2f3;
+    border-radius: 6rpx;
+    margin-left: 14rpx;
+}
+.wrap2-item {
+    height: 292rpx;
+}
+.wrap2-pic {
+    width: 100%;
+    height: 200rpx;
+    border-radius: 8rpx 8rpx 0 0;
+}
+.wrap2-icon {
+    top: 18rpx;
+    right: 18rpx;
+}
+.wrap2-title {
+    font-size: 26rpx;
+    line-height: 36rpx;
+    font-weight: 700;
+    width: 658rpx;
+    margin: 10rpx auto 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.wrap2-time {
+    font-size: 22rpx;
+    line-height: 34rpx;
+    color: #f05200;
+    margin-left: 26rpx;
+}
+.none {
+    text-align: center;
+    margin: 200rpx auto 0;
+}
+.none-icon {
+    width: 156rpx;
+    height: 180rpx;
+    margin: 0 auto;
+}
+.none-text {
+    font-size: 28rpx;
+    line-height: 80rpx;
+    color: #afb0b1;
+}

@@ -1,0 +1,40 @@
+<!--index.wxml-->
+<view class="container">
+  <image src="https://xcx.xt.cn/filemanager/uploads/images/2024/04/26/63499.jpg" mode="widthFix" class="bg" />
+  <view class="resultbox">
+    <view class="resultType">你的求职竞争力达到了<text class="yellow">{{point}}</text>分</view>
+    <view class="beat">击败了{{beat}}的小伙伴</view>
+    <view class="result">
+      <view class="result_1">
+        <image src="../../img/people.png" mode="widthFix" class="result_1_1_img" />
+        <view class="result_1_1">
+          <view class="result_1_1_1">
+            <view style="height: 40vh;">
+              <ec-canvas type="2d" id="mychart-dom-graph" canvas-id="mychart-graph" force-use-old-canvas="true" ec="{{ ec }}"></ec-canvas>
+            </view>
+            <view class="points">
+              <view class="points_li" bindtap="showLay" data-id="{{item}}" wx:for="{{typeList}}" wx:key="text">{{item}}<text class="num">{{pointObj[item]}}</text></view>
+            </view>
+            <image src="../../img/evaluation_icon.jpg" mode="widthFix" class="result_icon" />
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="kf" bindtap="toCustomerService">我该如何提升</view>
+    <!-- <button open-type="contact" class="kf" bindcontact="handleContact">我该如何提升</button> -->
+  </view>
+
+  <view class="contact_lay" hidden="{{lay}}">
+    <view class="laybox">
+      <text class="title">你的 <text class="b type">{{type}}</text> {{txt}}</text>
+      <view class="qrcode">
+        <image src="https://xcx.xt.cn/filemanager/uploads/images/2024/04/28/53732.jpg" bindlongpress="saveQr" mode="widthFix" class="qrcode_img" />
+      </view>
+      <view class="txt">个人竞争力提升方案</view>
+      <!-- <view class="btn" bindtap="toCustomerService">点击咨询 高效了解</view> -->
+      <button open-type="contact" class="btn" bindcontact="handleContact">点击咨询 高效了解</button>
+
+      <image src="../../img/e_close.png" mode="widthFix" class="e_close" bindtap="e_close" />
+    </view>
+  </view>
+</view>

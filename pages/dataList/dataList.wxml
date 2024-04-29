@@ -1,0 +1,36 @@
+<view class="title1-wrap">
+    <text class="title1-text{{item.css}}" wx:for="{{title1List}}" wx:key="text" bindtap="title1Change" data-index="{{index}}">{{item.text}}</text>
+</view>
+<view class="title2-box">
+    <movable-area class="title2-item title2-item1" hidden="{{title2HiddenList[0]}}">
+        <view class="title2-wrap" style="width: {{title2WrapWidth1}}px;" direction="horizontal" inertia out-of-bounds>
+            <text class="title2-text title2-text1{{item.css}}" wx:for="{{title2List0}}" wx:key="text" bindtap="title2Change" data-index="{{index}}" data-flag="item1">{{item.text}}</text>
+        </view>
+    </movable-area>
+    <view class="title2-item title2-item2" hidden="{{title2HiddenList[1]}}">
+      <view class="title2-wrap" style="width: {{title2WrapWidth2}}px;" direction="horizontal" inertia out-of-bounds>
+        <text class="title2-text title2-text2{{item.css}}" wx:for="{{title2List1}}" wx:key="text" bindtap="title2Change" data-index="{{index}}" data-flag="item2">{{item.text}}</text>
+        </view>
+    </view>
+    <view class="title2-item title2-item3" hidden="{{title2HiddenList[2]}}">
+        <text class="title2-text title2-text3{{item.css}}" wx:for="{{title2List2}}" wx:key="text" bindtap="title2Change" data-index="{{index}}" data-flag="item3">{{item.text}}</text>
+    </view>
+</view>
+<qrCode path="{{path}}" atype="datalist" aid="100">
+    <scroll-view class="wrap" scroll-y enable-back-to-top>
+        <view class="item" wx:for="{{dataList}}" wx:key="id">
+            <image class="bg" src="/img/dataList_bg.png"></image>
+            <view class="content">
+                <image class="pic" src="{{item.pic}}"></image>
+                <view class="info">
+                    <text class="title">{{item.title}}</text>
+                    <view class="flag-wrap">
+                        <text class="flag-text" wx:for="{{item.flagList}}" wx:key="item1" wx:for-item="item1">{{item1}}</text>
+                    </view>
+                </view>
+                <view class="line"></view>
+                <image class="icon" src="{{item.icon}}" bindtap="download" data-index="{{index}}"></image>
+            </view>
+        </view>
+    </scroll-view>
+</qrCode>

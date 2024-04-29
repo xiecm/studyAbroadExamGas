@@ -1,0 +1,34 @@
+page {
+    font-size: 0;
+    color: #333;
+
+}
+page, view, scroll-view, image, text, canvas, form, input, textarea, button, movable-area, movable-view, picker, open-data {
+    box-sizing: border-box;
+    font-family: "Arial",  sans-serif;
+}
+form, text, video, image, open-data {
+    display: block;
+}
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+text {
+    font-family: "Arial",  sans-serif;
+}
+.box {
+    background: #fff;
+    border-radius: 20rpx;
+    box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, .35);
+}
+.pop {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .5);
+    z-index: 3;
+}

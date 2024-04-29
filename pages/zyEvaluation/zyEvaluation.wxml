@@ -1,0 +1,21 @@
+<view class="page">
+  <qrCode path="/pages/zyEvaluation/zyEvaluation" atype="zyEvaluation" aid="101">
+    <!-- 开始页 -->
+    <view class="startPage">
+    <image src="https://xcx.xt.cn/filemanager/uploads/images/2024/04/26/23937.jpg" mode="widthFix" class="bg" />
+    <view>
+      <text class="starttext">
+        羡慕身边那些春风得意的offer收割机？
+        不如测测自己斩获offer有几分胜算。
+        新通教育总结500强名企招聘标准，通过数十万
+        毕业生大数据分析，评估你的求职竞争力。
+        评分越高，越能得到企业青睐哦。
+      </text>
+    </view>
+    <view class="start" bindtap="start">开始吧</view>
+  <image src="https://xcx.xt.cn/filemanager/uploads/images/2024/04/26/28212.png" mode="widthFix" class="qlogo"/>
+
+  </view>
+  </qrCode>
+
+</view>

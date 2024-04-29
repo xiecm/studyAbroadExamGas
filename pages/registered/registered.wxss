@@ -1,0 +1,131 @@
+page {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.bg {
+  width: 100%;
+  height: 100% !important;
+}
+
+.container {
+  position: absolute;
+  width: 100%;
+  top: 228rpx;
+  left: 0;
+}
+
+.logo {
+  width: 404rpx;
+  height: 124rpx;
+  margin: 0 auto;
+}
+
+.slogan {
+  width: 404rpx;
+  height: 70rpx;
+  margin: 50rpx auto 120rpx;
+}
+
+.item {
+  width: 450rpx;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 6rpx;
+  margin: 0 auto 40rpx;
+}
+
+.item-icon {
+  width: 24rpx;
+  height: 24rpx;
+  margin: 0 12rpx;
+}
+
+.input {
+  font-size: 26rpx;
+  line-height: 68rpx;
+  height: 68rpx;
+  width: 400rpx;
+  padding-right: 20rpx;
+  background: transparent;
+}
+
+.item-box {
+  width: 450rpx;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 20rpx;
+}
+
+.code-box {
+  width: 240rpx;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 6rpx;
+}
+
+.code {
+  width: 190rpx;
+}
+
+.get-code {
+  padding: 0;
+  margin: 0 !important;
+  font-size: 26rpx;
+  line-height: 68rpx;
+  font-weight: normal;
+  color: #fff;
+  text-align: center;
+  width: 190rpx !important;
+  border-radius: 6rpx;
+  background: linear-gradient(-43deg, #de6a9b, #cb70b8, #b06dd0);
+}
+
+.get-tel {
+  width: 70% !important;
+  background: transparent;
+  padding: 0;
+  text-align: center;
+}
+
+.fastLogin {
+  width: 70% !important;
+  background: linear-gradient(-43deg, #de6a9b, #cb70b8, #b06dd0);
+  color: #ffffff;
+  font-weight: normal;
+  margin-bottom: 50rpx;
+  font-size: 32rpx;
+  line-height: 58rpx;
+}
+
+.get-tel-icon {
+  width: 36rpx;
+  height: 28rpx;
+}
+
+.get-tel-text {
+  font-size: 32rpx;
+  line-height: 58rpx;
+  font-weight: normal;
+  color: #5aa240;
+  text-decoration: underline;
+}
+
+.submit {
+  width: 450rpx !important;
+  font-size: 32rpx;
+  line-height: 74rpx;
+  color: #fff;
+  font-weight: normal;
+  padding: 0;
+  border-radius: 38rpx;
+  margin-top: 80rpx;
+  background: linear-gradient(-43deg, #de6a9b, #cb70b8, #b06dd0);
+}
+
+.input-placeholder {
+  color: #a6a6a6;
+}

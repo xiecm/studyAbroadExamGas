@@ -1,0 +1,11 @@
+<view class="content">
+    <view class="head">
+        <image class="head-icon" src="{{headIcon}}" mode="aspectFit"></image>
+        <text class="head-text">{{title}}</text>
+    </view>
+    <view class="item" wx:for="{{list}}" wx:key="title" bindtap="openFile" data-url="{{item.url}}">
+        <image class="icon1" src="/icon/downDataList_icon1.png"></image>
+        <text class="title">{{item.title}}</text>
+        <image class="icon2" src="/icon/downDataList_icon2.png"></image>
+    </view>
+</view>

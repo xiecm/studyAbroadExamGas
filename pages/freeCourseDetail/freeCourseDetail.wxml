@@ -1,0 +1,21 @@
+<text class="title">{{title}}</text>
+<view class="head">
+    <view class="head-info">
+        <view class="head-flag-box">
+            <text class="head-flag" wx:for="{{flagList}}" wx:key="*this">{{item}}</text>
+        </view>
+        <text class="head-text">宣讲：共{{courseNum}}场</text>
+    </view>
+    <view class="head-mark" bindtap="mask">
+        <image class="head-mark-icon" src="{{markIcon}}"></image>
+        <text class="head-mark-text">{{markText}}</text>
+    </view>
+</view>
+<cover-view class="cover" bindtap="toRegistered" hidden="{{coverHidden}}"></cover-view>
+<video wx-if="{{v_satus}}" class="video" id="myVideo" src="{{videoSrc}}" poster="{{videoPic}}" title="{{title}}" bindloadedmetadata="videoLoad" bindplay="startPlay"></video>
+<text class="tit1">精彩剧透：</text>
+<text class="intro">{{intro}}</text>
+<text class="tit2">场次选择：</text>
+<view class="wrap">
+    <text class="item{{item.css}}" wx:for="{{videoList}}" wx:key="src" bindtap="play" data-index="{{index}}">第{{index + 1}}场</text>
+</view>

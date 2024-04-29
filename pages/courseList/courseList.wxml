@@ -1,0 +1,51 @@
+<view class="head" style="height: {{headHeight}}px;">
+    <image class="head-bg" src="/img/index_banner.png" mode="widthFix"></image>
+    <view class="title-box" style="top: {{titleTop}}px;">
+        <image class="logo" src="/img/index_logo.png"></image>
+        <text class="title" style="line-height: {{headHeight - titleTop}}px;">讲座活动</text>
+    </view>
+</view>
+<qrCode path="/pages/findex/findex" atype="courselist" aid="100">
+    <view class="title1-wrap{{title1WrapCss}}" style="top: {{title1Top}}px;">
+        <view class="title1-item" wx:for="{{title1List}}" wx:key="text" bindtap="title1Change" data-index="{{index}}">
+            <text class="title1-text{{item.css}}">{{item.text}}</text>
+            <view class="title1-line" hidden="{{item.flag}}"></view>
+        </view>
+    </view>
+    <scroll-view class="container" scroll-y enable-back-to-top bindscroll="doScroll">
+        <image class="banner" src="/img/index_banner.png" mode="widthFix"></image>
+        <view class="content" style="top: {{headHeight}}px;">
+            <view class="swiper-box">
+                <swiper class="swiper" autoplay circular bindchange="swiperChange">
+                    <swiper-item wx:for="{{swiperList}}" wx:key="id" bindtap="toActiveDetail" data-id="{{item.id}}">
+                        <image class="swiper-img" src="{{item.src}}"></image>
+                    </swiper-item>
+                </swiper>
+                <view class="swiper-dot-box">
+                    <view class="swiper-dot{{item.css}}" wx:for="{{swiperList}}" wx:key="id"></view>
+                </view>
+            </view>
+            <view class="title2-box{{fixedTitle}}" hidden="{{title2Hidden}}" style="top: {{title2Top}};">
+                <view class="title2-item title2-item1" hidden="{{title2HiddenList[0]}}">
+                    <text class="title2-text title2-text1{{item.css}}" wx:for="{{title2List1}}" wx:key="text" bindtap="title2Change" data-index="{{index}}" data-flag="item1">{{item.text}}</text>
+                </view>
+                
+                <view class="title2-item title2-item2" hidden="{{title2HiddenList[1]}}">
+                    <text class="title2-text title2-text2{{item.css}}" wx:for="{{title2List2}}" wx:key="text" bindtap="title2Change" data-index="{{index}}" data-flag="item2">{{item.text}}</text>
+                </view>
+                <view class="title2-item title2-item3" hidden="{{title2HiddenList[2]}}">
+                    <text class="title2-text title2-text3{{item.css}}" wx:for="{{title2List3}}" wx:key="text" bindtap="title2Change" data-index="{{index}}" data-flag="item3">{{item.text}}</text>
+                </view>
+            </view>
+            <view class="course-wrap{{courseWrapCss}}">
+                <view class="course-item" wx:for="{{courseList}}" wx:key="id" bindtap="toFreeCourseDetail" data-id="{{item.id}}">
+                    <image class="course-pic" src="{{item.pic}}" mode="aspectFill"></image>
+                    <text class="course-title">{{item.title}}</text>
+                    <view class="course-flag-wrap">
+                        <text class="course-flag" wx:for="{{item.flag}}" wx:for-item="item1" wx:key="*this">{{item1}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+</qrCode>

@@ -1,0 +1,45 @@
+<view class="page">
+  <!-- 答题页 -->
+  <view class="questionPage">
+    <image src="https://xcx.xt.cn/filemanager/uploads/images/2024/04/26/63499.jpg" mode="widthFix" class="bg" />
+    <view class="questionbox">
+      <view class="questionType"><text class="t">{{question.choseType && question.choseType=='radio'?'单选题':'多选题'}}</text><text>{{nowIdx+1}}</text>/<text>{{total}}</text></view>
+      <view class="question">
+        <view class="question_1">
+          <image src="../../../img/people.png" mode="widthFix" class="question_1_1_img" />
+          <image src="../../../img/paper.png" mode="widthFix" class="paper" />
+          <view class="question_1_1">
+            <view class="question_1_1_1">
+              <view class="question-title">{{question.q}}</view>
+              <radio-group class="radiobox" bindchange="radioChange" wx:if="{{question.choseType && question.choseType=='radio'}}">
+                <label class="weui-cell weui-check__label {{item.checked?'is_checked':''}}" wx:for="{{question.a}}" wx:key="index">
+                  <view class="weui-cell__hd">
+                    <radio value="{{item.point}}" checked="{{item.checked}}" />
+                  </view>
+                  <view class="weui-cell__bd">{{item.txt}}</view>
+                </label>
+              </radio-group>
+              <checkbox-group class="checkbox" bindchange="checkboxChange" wx:else="">
+                <label class="weui-cell weui-check__label {{item.checked?'is_checked':''}}" wx:for="{{question.a}}" wx:key="index">
+                  <view class="weui-cell__hd">
+                    <checkbox value="{{item.point}}"  checked="{{item.checked}}" />
+                  </view>
+                  <view class="weui-cell__bd">{{item.txt}}</view>
+                </label>
+              </checkbox-group>
+              <image src="../../../img/evaluation_icon.jpg" mode="widthFix" class="question_icon" />
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="jump">
+        <button class="btn" bindtap="prev"  wx:if="{{nowIdx!=0}}">上一题</button>
+        <button wx:if="{{hasLogin}}" class="btn next" bindtap="{{nowIdx!=7?'next':'submit'}}" disabled='{{nextdisabled}}'>{{nowIdx!=7?'下一题':'查看结果'}}</button>
+        <button  wx:else="" class="btn next" open-type="getPhoneNumber" bindgetphonenumber="getChatTel" disabled='{{nextdisabled}}'><text class="text">查看结果</text></button>
+      </view>
+    </view>
+  <image src="https://xcx.xt.cn/filemanager/uploads/images/2024/04/26/28212.png" mode="widthFix" class="qlogo"/>
+
+  </view>
+
+</view>

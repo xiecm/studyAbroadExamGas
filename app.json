@@ -1,0 +1,55 @@
+{
+    "pages": [
+        "pages/findex/findex",
+        "pages/index/index",
+        "pages/courseList/courseList",
+        "pages/mine/mine",
+        "pages/activeDetail/activeDetail",
+        "pages/dataList/dataList",
+        "pages/freeCourseDetail/freeCourseDetail",
+        "pages/markList/markList",
+        "pages/downDataList/downDataList",
+        "pages/registered/registered",
+        "pages/activeDetail/reservation/reservation",
+        "pages/registered/login/login",
+        "pages/zyEvaluation/zyEvaluation",
+        "pages/zyEvaluation/zyEvaluationList/zyEvaluationList",
+        "pages/zyResult/zyResult",
+        "pages/53kf/53kf"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTextStyle": "black"
+    },
+    "singlePage" : {
+      "navigationBarFit" : "float" 
+    },
+    "tabBar": {
+        "color": "#808080",
+        "selectedColor": "#e56a24",
+        "borderStyle": "black",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "icon/tab1_1.png",
+                "selectedIconPath": "icon/tab1_2.png"
+            },
+            {
+                "pagePath": "pages/courseList/courseList",
+                "text": "讲座活动",
+                "iconPath": "icon/tab2_1.png",
+                "selectedIconPath": "icon/tab2_2.png"
+            },
+            {
+                "pagePath": "pages/mine/mine",
+                "text": "我的",
+                "iconPath": "icon/tab3_1.png",
+                "selectedIconPath": "icon/tab3_2.png"
+            }
+        ]
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

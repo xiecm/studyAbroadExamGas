@@ -1,0 +1,14 @@
+<movable-area class="movable-box">
+    <movable-view class="qrCode-flag-box" wx:if="{{staffFlag}}" x="{{flagX}}" y="{{flagY}}" bindtap="showCode" bindchange="flagChange" bindtouchend="flagEnd" direction="all" animation="{{animationFlag}}">
+        <image class="qrCode-flag-icon" src="/icon/activeDetail_code_flag.png"></image>
+    </movable-view>
+    <view class="qrCode-pop" hidden="{{popHidden}}">
+        <view class="qrCode-pop-content">
+            <image class="qrCode-qrCode" src="{{qrCode}}" bindlongpress="saveQrCode"></image>
+            <text class="qrCode-pop-text">长按保存专属二维码</text>
+            <image class="qrCode-pop-close-icon" src="/icon/activeDetail_close.png"></image>
+            <view class="qrCode-pop-close" bindtap="closePop"></view>
+        </view>
+    </view>
+    <slot></slot>
+</movable-area>

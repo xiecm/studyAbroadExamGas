@@ -1,0 +1,7 @@
+{
+    "navigationStyle": "custom",
+    "navigationBarTitleText": "留学考试加油站",
+    "usingComponents": {
+        "qrCode": "/components/getQrCodeComponent/getQrCodeComponent"
+    }
+}

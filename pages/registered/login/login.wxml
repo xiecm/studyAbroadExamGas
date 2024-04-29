@@ -1,0 +1,21 @@
+<image class="bg" src="/img/registered_bg.png" mode="widthFix"></image>
+<view class="container">
+  <image class="logo" src="/img/registered_logo.png" mode="aspectFit"></image>
+  <image class="slogan" src="/img/registered_title.png"></image>
+    <view class="item" wx:if="{{isName}}">
+      <image class="item-icon" src="/icon/registered_icon1.png" mode="aspectFit"></image>
+      <input class="input name" placeholder="怎么称呼您" bindinput="getName" />
+    </view>
+    <view class="item">
+      <image class="item-icon" src="/icon/registered_icon2.png" mode="aspectFit"></image>
+      <input type="number" class="input tel" placeholder="您的手机号" value="{{tel}}" bindinput="getTel" />
+    </view>
+    <view class="item-box" >
+      <view class="code-box">
+        <image class="item-icon" src="/icon/registered_icon3.png" mode="aspectFit"></image>
+        <input class="input code" placeholder="请输入验证码" bindinput="getCode" />
+      </view>
+      <button class="get-code" bindtap="sendTel">{{sendText}}</button>
+    </view>
+    <button class="submit" bindtap="submit">确定</button>
+</view>

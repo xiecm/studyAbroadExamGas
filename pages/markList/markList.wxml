@@ -1,0 +1,38 @@
+<view class="tit-wrap">
+    <view class="tit-item{{titCss1}}" bindtap="titChange" data-index="0">
+        <image class="tit-icon" src="{{titIcon1}}"></image>
+        <text class="tit-text">{{titText1}}</text>
+    </view>
+    <view class="tit-item{{titCss2}}" bindtap="titChange" data-index="1">
+        <image class="tit-icon" src="{{titIcon2}}"></image>
+        <text class="tit-text">{{titText2}}</text>
+    </view>
+</view>
+<scroll-view class="container" scroll-y>
+    <view class="wrap1" hidden="{{wrapHidden}}">
+        <view class="wrap1-item" wx:for="{{list1}}" wx:key="id" bindtap="toFreeCourseDetail" data-id="{{item.id}}">
+            <image class="wrap1-pic" src="{{item.src}}" mode="aspectFill"></image>
+            <image class="wrap1-icon" src="{{item.icon}}" mode="aspectFit" wx:if="{{markFlag}}" catchtap="mark" data-type="video" data-index="{{index}}"></image>
+            <text class="wrap1-title">{{item.title}}</text>
+            <view class="wrap1-flag-box">
+                <text class="wrap1-flag-text" wx:for="{{item.flag}}" wx:key="*this" wx:for-item="item1">{{item1}}</text>
+            </view>
+        </view>
+        <view class="none" hidden="{{wrap1NoneFlag}}">
+            <image class="none-icon" src="/icon/mine_no_data.png"></image>
+            <text class="none-text">{{wrap1NoneText}}</text>
+        </view>
+    </view>
+    <view class="wrap2" hidden="{{!wrapHidden}}">
+        <view class="wrap2-item" wx:for="{{list2}}" wx:key="id" bindtap="toActiveDetail" data-id="{{item.id}}">
+            <image class="wrap2-pic" src="{{item.src}}" mode="aspectFill"></image>
+            <image class="wrap2-icon" src="{{item.icon}}" mode="aspectFit" wx:if="{{markFlag}}" catchtap="mark" data-type="act" data-index="{{index}}"></image>
+            <text class="wrap2-title">{{item.title}}</text>
+            <text class="wrap2-time">活动时间：{{item.time}}</text>
+        </view>
+        <view class="none" hidden="{{wrap2NoneFlag}}">
+            <image class="none-icon" src="/icon/mine_no_data.png"></image>
+            <text class="none-text">{{wrap2NoneText}}</text>
+        </view>
+    </view>
+</scroll-view>
